@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "liarsbar:block/wall_sconce"
+    },
+    "facing=east": {
+      "model": "liarsbar:block/wall_sconce",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "liarsbar:block/wall_sconce",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "liarsbar:block/wall_sconce",
+      "y": 270
+    }
+  }
+}

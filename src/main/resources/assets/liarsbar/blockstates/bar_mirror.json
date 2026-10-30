@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "facing=north,col=0,row=0": {
+      "model": "liarsbar:block/bar_mirror_0_1"
+    },
+    "facing=north,col=0,row=1": {
+      "model": "liarsbar:block/bar_mirror_0_0"
+    },
+    "facing=north,col=1,row=0": {
+      "model": "liarsbar:block/bar_mirror_1_1"
+    },
+    "facing=north,col=1,row=1": {
+      "model": "liarsbar:block/bar_mirror_1_0"
+    },
+    "facing=north,col=2,row=0": {
+      "model": "liarsbar:block/bar_mirror_2_1"
+    },
+    "facing=north,col=2,row=1": {
+      "model": "liarsbar:block/bar_mirror_2_0"
+    },
+    "facing=east,col=0,row=0": {
+      "model": "liarsbar:block/bar_mirror_0_1",
+      "y": 90
+    },
+    "facing=east,col=0,row=1": {
+      "model": "liarsbar:block/bar_mirror_0_0",
+      "y": 90
+    },
+    "facing=east,col=1,row=0": {
+      "model": "liarsbar:block/bar_mirror_1_1",
+      "y": 90
+    },
+    "facing=east,col=1,row=1": {
+      "model": "liarsbar:block/bar_mirror_1_0",
+      "y": 90
+    },
+    "facing=east,col=2,row=0": {
+      "model": "liarsbar:block/bar_mirror_2_1",
+      "y": 90
+    },
+    "facing=east,col=2,row=1": {
+      "model": "liarsbar:block/bar_mirror_2_0",
+      "y": 90
+    },
+    "facing=south,col=0,row=0": {
+      "model": "liarsbar:block/bar_mirror_0_1",
+      "y": 180
+    },
+    "facing=south,col=0,row=1": {
+      "model": "liarsbar:block/bar_mirror_0_0",
+      "y": 180
+    },
+    "facing=south,col=1,row=0": {
+      "model": "liarsbar:block/bar_mirror_1_1",
+      "y": 180
+    },
+    "facing=south,col=1,row=1": {
+      "model": "liarsbar:block/bar_mirror_1_0",
+      "y": 180
+    },
+    "facing=south,col=2,row=0": {
+      "model": "liarsbar:block/bar_mirror_2_1",
+      "y": 180
+    },
+    "facing=south,col=2,row=1": {
+      "model": "liarsbar:block/bar_mirror_2_0",
+      "y": 180
+    },
+    "facing=west,col=0,row=0": {
+      "model": "liarsbar:block/bar_mirror_0_1",
+      "y": 270
+    },
+    "facing=west,col=0,row=1": {
+      "model": "liarsbar:block/bar_mirror_0_0",
+      "y": 270
+    },
+    "facing=west,col=1,row=0": {
+      "model": "liarsbar:block/bar_mirror_1_1",
+      "y": 270
+    },
+    "facing=west,col=1,row=1": {
+      "model": "liarsbar:block/bar_mirror_1_0",
+      "y": 270
+    },
+    "facing=west,col=2,row=0": {
+      "model": "liarsbar:block/bar_mirror_2_1",
+      "y": 270
+    },
+    "facing=west,col=2,row=1": {
+      "model": "liarsbar:block/bar_mirror_2_0",
+      "y": 270
+    }
+  }
+}

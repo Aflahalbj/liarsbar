@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,design=pull,half=upper": {
+      "model": "liarsbar:block/poster_pull_top"
+    },
+    "facing=north,design=pull,half=lower": {
+      "model": "liarsbar:block/poster_pull_bottom"
+    },
+    "facing=north,design=bluff,half=upper": {
+      "model": "liarsbar:block/poster_bluff_top"
+    },
+    "facing=north,design=bluff,half=lower": {
+      "model": "liarsbar:block/poster_bluff_bottom"
+    },
+    "facing=east,design=pull,half=upper": {
+      "model": "liarsbar:block/poster_pull_top",
+      "y": 90
+    },
+    "facing=east,design=pull,half=lower": {
+      "model": "liarsbar:block/poster_pull_bottom",
+      "y": 90
+    },
+    "facing=east,design=bluff,half=upper": {
+      "model": "liarsbar:block/poster_bluff_top",
+      "y": 90
+    },
+    "facing=east,design=bluff,half=lower": {
+      "model": "liarsbar:block/poster_bluff_bottom",
+      "y": 90
+    },
+    "facing=south,design=pull,half=upper": {
+      "model": "liarsbar:block/poster_pull_top",
+      "y": 180
+    },
+    "facing=south,design=pull,half=lower": {
+      "model": "liarsbar:block/poster_pull_bottom",
+      "y": 180
+    },
+    "facing=south,design=bluff,half=upper": {
+      "model": "liarsbar:block/poster_bluff_top",
+      "y": 180
+    },
+    "facing=south,design=bluff,half=lower": {
+      "model": "liarsbar:block/poster_bluff_bottom",
+      "y": 180
+    },
+    "facing=west,design=pull,half=upper": {
+      "model": "liarsbar:block/poster_pull_top",
+      "y": 270
+    },
+    "facing=west,design=pull,half=lower": {
+      "model": "liarsbar:block/poster_pull_bottom",
+      "y": 270
+    },
+    "facing=west,design=bluff,half=upper": {
+      "model": "liarsbar:block/poster_bluff_top",
+      "y": 270
+    },
+    "facing=west,design=bluff,half=lower": {
+      "model": "liarsbar:block/poster_bluff_bottom",
+      "y": 270
+    }
+  }
+}

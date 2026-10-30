@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "liarsbar:block/back_cabinet"
+    },
+    "facing=east": {
+      "model": "liarsbar:block/back_cabinet",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "liarsbar:block/back_cabinet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "liarsbar:block/back_cabinet",
+      "y": 270
+    }
+  }
+}

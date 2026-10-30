@@ -1,0 +1,235 @@
+{
+  "heartbeat": {
+    "subtitle": "subtitles.liarsbar.heartbeat",
+    "sounds": [
+      {
+        "name": "liarsbar:heartbeat"
+      }
+    ]
+  },
+  "revolver_spin": {
+    "subtitle": "subtitles.liarsbar.revolver_spin",
+    "sounds": [
+      {
+        "name": "liarsbar:revolver_spin"
+      }
+    ]
+  },
+  "revolver_open": {
+    "subtitle": "subtitles.liarsbar.revolver_open",
+    "sounds": [
+      {
+        "name": "liarsbar:revolver_open"
+      }
+    ]
+  },
+  "revolver_close": {
+    "subtitle": "subtitles.liarsbar.revolver_close",
+    "sounds": [
+      {
+        "name": "liarsbar:revolver_close"
+      }
+    ]
+  },
+  "hammer_cock": {
+    "subtitle": "subtitles.liarsbar.hammer_cock",
+    "sounds": [
+      {
+        "name": "liarsbar:hammer_cock"
+      }
+    ]
+  },
+  "dry_fire": {
+    "subtitle": "subtitles.liarsbar.dry_fire",
+    "sounds": [
+      {
+        "name": "liarsbar:dry_fire"
+      }
+    ]
+  },
+  "gunshot": {
+    "subtitle": "subtitles.liarsbar.gunshot",
+    "sounds": [
+      {
+        "name": "liarsbar:gunshot"
+      }
+    ]
+  },
+  "tinnitus": {
+    "subtitle": "subtitles.liarsbar.tinnitus",
+    "sounds": [
+      {
+        "name": "liarsbar:tinnitus"
+      }
+    ]
+  },
+  "exhale_relief": {
+    "subtitle": "subtitles.liarsbar.exhale_relief",
+    "sounds": [
+      {
+        "name": "liarsbar:exhale_relief"
+      }
+    ]
+  },
+  "inhale_tense": {
+    "subtitle": "subtitles.liarsbar.inhale_tense",
+    "sounds": [
+      {
+        "name": "liarsbar:inhale_tense"
+      }
+    ]
+  },
+  "body_fall": {
+    "subtitle": "subtitles.liarsbar.body_fall",
+    "sounds": [
+      {
+        "name": "liarsbar:body_fall"
+      }
+    ]
+  },
+  "gun_table": {
+    "subtitle": "subtitles.liarsbar.gun_table",
+    "sounds": [
+      {
+        "name": "liarsbar:gun_table"
+      }
+    ]
+  },
+  "gun_pickup": {
+    "subtitle": "subtitles.liarsbar.gun_pickup",
+    "sounds": [
+      {
+        "name": "liarsbar:gun_pickup"
+      }
+    ]
+  },
+  "card_riffle": {
+    "subtitle": "subtitles.liarsbar.card_riffle",
+    "sounds": [
+      {
+        "name": "liarsbar:card_riffle1"
+      },
+      {
+        "name": "liarsbar:card_riffle2"
+      },
+      {
+        "name": "liarsbar:card_riffle3"
+      },
+      {
+        "name": "liarsbar:card_riffle4"
+      },
+      {
+        "name": "liarsbar:card_riffle5"
+      }
+    ]
+  },
+  "card_slide": {
+    "subtitle": "subtitles.liarsbar.card_slide",
+    "sounds": [
+      {
+        "name": "liarsbar:card_slide1"
+      },
+      {
+        "name": "liarsbar:card_slide2"
+      },
+      {
+        "name": "liarsbar:card_slide3"
+      },
+      {
+        "name": "liarsbar:card_slide4"
+      },
+      {
+        "name": "liarsbar:card_slide5"
+      },
+      {
+        "name": "liarsbar:card_slide6"
+      },
+      {
+        "name": "liarsbar:card_slide7"
+      },
+      {
+        "name": "liarsbar:card_slide8"
+      }
+    ]
+  },
+  "card_place": {
+    "subtitle": "subtitles.liarsbar.card_place",
+    "sounds": [
+      {
+        "name": "liarsbar:card_place1"
+      },
+      {
+        "name": "liarsbar:card_place2"
+      },
+      {
+        "name": "liarsbar:card_place3"
+      },
+      {
+        "name": "liarsbar:card_place4"
+      }
+    ]
+  },
+  "card_shove": {
+    "subtitle": "subtitles.liarsbar.card_shove",
+    "sounds": [
+      {
+        "name": "liarsbar:card_shove1"
+      },
+      {
+        "name": "liarsbar:card_shove2"
+      },
+      {
+        "name": "liarsbar:card_shove3"
+      },
+      {
+        "name": "liarsbar:card_shove4"
+      }
+    ]
+  },
+  "card_fan": {
+    "subtitle": "subtitles.liarsbar.card_fan",
+    "sounds": [
+      {
+        "name": "liarsbar:card_fan1"
+      },
+      {
+        "name": "liarsbar:card_fan2"
+      }
+    ]
+  },
+  "bullet_pick": {
+    "subtitle": "subtitles.liarsbar.bullet_pick",
+    "sounds": [
+      {
+        "name": "liarsbar:gun_table",
+        "pitch": 2.0,
+        "volume": 0.22
+      }
+    ]
+  },
+  "bullet_slide": {
+    "subtitle": "subtitles.liarsbar.bullet_slide",
+    "sounds": [
+      {
+        "name": "liarsbar:card_slide3",
+        "pitch": 1.7,
+        "volume": 0.35
+      },
+      {
+        "name": "liarsbar:card_slide5",
+        "pitch": 1.8,
+        "volume": 0.35
+      }
+    ]
+  },
+  "bullet_seat": {
+    "subtitle": "subtitles.liarsbar.bullet_seat",
+    "sounds": [
+      {
+        "name": "liarsbar:hammer_cock",
+        "pitch": 1.9,
+        "volume": 0.5
+      }
+    ]
+  }
+}

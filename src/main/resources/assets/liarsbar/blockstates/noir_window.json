@@ -1,0 +1,184 @@
+{
+  "variants": {
+    "facing=north,half=upper,pane=left,scene=0": {
+      "model": "liarsbar:block/noir_window_0_left_top"
+    },
+    "facing=north,half=upper,pane=left,scene=1": {
+      "model": "liarsbar:block/noir_window_1_left_top"
+    },
+    "facing=north,half=lower,pane=left,scene=0": {
+      "model": "liarsbar:block/noir_window_0_left_bottom"
+    },
+    "facing=north,half=lower,pane=left,scene=1": {
+      "model": "liarsbar:block/noir_window_1_left_bottom"
+    },
+    "facing=north,half=upper,pane=right,scene=0": {
+      "model": "liarsbar:block/noir_window_0_right_top"
+    },
+    "facing=north,half=upper,pane=right,scene=1": {
+      "model": "liarsbar:block/noir_window_1_right_top"
+    },
+    "facing=north,half=lower,pane=right,scene=0": {
+      "model": "liarsbar:block/noir_window_0_right_bottom"
+    },
+    "facing=north,half=lower,pane=right,scene=1": {
+      "model": "liarsbar:block/noir_window_1_right_bottom"
+    },
+    "facing=north,half=upper,pane=single,scene=0": {
+      "model": "liarsbar:block/noir_window_s_single_top"
+    },
+    "facing=north,half=upper,pane=single,scene=1": {
+      "model": "liarsbar:block/noir_window_s_single_top"
+    },
+    "facing=north,half=lower,pane=single,scene=0": {
+      "model": "liarsbar:block/noir_window_s_single_bottom"
+    },
+    "facing=north,half=lower,pane=single,scene=1": {
+      "model": "liarsbar:block/noir_window_s_single_bottom"
+    },
+    "facing=east,half=upper,pane=left,scene=0": {
+      "model": "liarsbar:block/noir_window_0_left_top",
+      "y": 90
+    },
+    "facing=east,half=upper,pane=left,scene=1": {
+      "model": "liarsbar:block/noir_window_1_left_top",
+      "y": 90
+    },
+    "facing=east,half=lower,pane=left,scene=0": {
+      "model": "liarsbar:block/noir_window_0_left_bottom",
+      "y": 90
+    },
+    "facing=east,half=lower,pane=left,scene=1": {
+      "model": "liarsbar:block/noir_window_1_left_bottom",
+      "y": 90
+    },
+    "facing=east,half=upper,pane=right,scene=0": {
+      "model": "liarsbar:block/noir_window_0_right_top",
+      "y": 90
+    },
+    "facing=east,half=upper,pane=right,scene=1": {
+      "model": "liarsbar:block/noir_window_1_right_top",
+      "y": 90
+    },
+    "facing=east,half=lower,pane=right,scene=0": {
+      "model": "liarsbar:block/noir_window_0_right_bottom",
+      "y": 90
+    },
+    "facing=east,half=lower,pane=right,scene=1": {
+      "model": "liarsbar:block/noir_window_1_right_bottom",
+      "y": 90
+    },
+    "facing=east,half=upper,pane=single,scene=0": {
+      "model": "liarsbar:block/noir_window_s_single_top",
+      "y": 90
+    },
+    "facing=east,half=upper,pane=single,scene=1": {
+      "model": "liarsbar:block/noir_window_s_single_top",
+      "y": 90
+    },
+    "facing=east,half=lower,pane=single,scene=0": {
+      "model": "liarsbar:block/noir_window_s_single_bottom",
+      "y": 90
+    },
+    "facing=east,half=lower,pane=single,scene=1": {
+      "model": "liarsbar:block/noir_window_s_single_bottom",
+      "y": 90
+    },
+    "facing=south,half=upper,pane=left,scene=0": {
+      "model": "liarsbar:block/noir_window_0_left_top",
+      "y": 180
+    },
+    "facing=south,half=upper,pane=left,scene=1": {
+      "model": "liarsbar:block/noir_window_1_left_top",
+      "y": 180
+    },
+    "facing=south,half=lower,pane=left,scene=0": {
+      "model": "liarsbar:block/noir_window_0_left_bottom",
+      "y": 180
+    },
+    "facing=south,half=lower,pane=left,scene=1": {
+      "model": "liarsbar:block/noir_window_1_left_bottom",
+      "y": 180
+    },
+    "facing=south,half=upper,pane=right,scene=0": {
+      "model": "liarsbar:block/noir_window_0_right_top",
+      "y": 180
+    },
+    "facing=south,half=upper,pane=right,scene=1": {
+      "model": "liarsbar:block/noir_window_1_right_top",
+      "y": 180
+    },
+    "facing=south,half=lower,pane=right,scene=0": {
+      "model": "liarsbar:block/noir_window_0_right_bottom",
+      "y": 180
+    },
+    "facing=south,half=lower,pane=right,scene=1": {
+      "model": "liarsbar:block/noir_window_1_right_bottom",
+      "y": 180
+    },
+    "facing=south,half=upper,pane=single,scene=0": {
+      "model": "liarsbar:block/noir_window_s_single_top",
+      "y": 180
+    },
+    "facing=south,half=upper,pane=single,scene=1": {
+      "model": "liarsbar:block/noir_window_s_single_top",
+      "y": 180
+    },
+    "facing=south,half=lower,pane=single,scene=0": {
+      "model": "liarsbar:block/noir_window_s_single_bottom",
+      "y": 180
+    },
+    "facing=south,half=lower,pane=single,scene=1": {
+      "model": "liarsbar:block/noir_window_s_single_bottom",
+      "y": 180
+    },
+    "facing=west,half=upper,pane=left,scene=0": {
+      "model": "liarsbar:block/noir_window_0_left_top",
+      "y": 270
+    },
+    "facing=west,half=upper,pane=left,scene=1": {
+      "model": "liarsbar:block/noir_window_1_left_top",
+      "y": 270
+    },
+    "facing=west,half=lower,pane=left,scene=0": {
+      "model": "liarsbar:block/noir_window_0_left_bottom",
+      "y": 270
+    },
+    "facing=west,half=lower,pane=left,scene=1": {
+      "model": "liarsbar:block/noir_window_1_left_bottom",
+      "y": 270
+    },
+    "facing=west,half=upper,pane=right,scene=0": {
+      "model": "liarsbar:block/noir_window_0_right_top",
+      "y": 270
+    },
+    "facing=west,half=upper,pane=right,scene=1": {
+      "model": "liarsbar:block/noir_window_1_right_top",
+      "y": 270
+    },
+    "facing=west,half=lower,pane=right,scene=0": {
+      "model": "liarsbar:block/noir_window_0_right_bottom",
+      "y": 270
+    },
+    "facing=west,half=lower,pane=right,scene=1": {
+      "model": "liarsbar:block/noir_window_1_right_bottom",
+      "y": 270
+    },
+    "facing=west,half=upper,pane=single,scene=0": {
+      "model": "liarsbar:block/noir_window_s_single_top",
+      "y": 270
+    },
+    "facing=west,half=upper,pane=single,scene=1": {
+      "model": "liarsbar:block/noir_window_s_single_top",
+      "y": 270
+    },
+    "facing=west,half=lower,pane=single,scene=0": {
+      "model": "liarsbar:block/noir_window_s_single_bottom",
+      "y": 270
+    },
+    "facing=west,half=lower,pane=single,scene=1": {
+      "model": "liarsbar:block/noir_window_s_single_bottom",
+      "y": 270
+    }
+  }
+}

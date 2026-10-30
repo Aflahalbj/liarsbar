@@ -1,0 +1,136 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "canvas": "liarsbar:block/awning",
+    "valance": "liarsbar:block/awning_valance",
+    "brass": "liarsbar:block/brass",
+    "particle": "liarsbar:block/awning"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        15,
+        0
+      ],
+      "to": [
+        16,
+        15.5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#canvas",
+          "rotation": 180,
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#canvas",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "north": {
+          "texture": "#canvas",
+          "uv": [
+            0,
+            0,
+            16,
+            0.5
+          ]
+        }
+      },
+      "rotation": {
+        "angle": -22.5,
+        "axis": "x",
+        "origin": [
+          8,
+          16,
+          16
+        ]
+      }
+    },
+    {
+      "from": [
+        0,
+        3.5,
+        1.1
+      ],
+      "to": [
+        16,
+        9.8,
+        1.1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#valance",
+          "uv": [
+            0,
+            0,
+            16,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#valance",
+          "uv": [
+            0,
+            0,
+            16,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        9.4,
+        0.9
+      ],
+      "to": [
+        16,
+        10.2,
+        1.4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            4,
+            16,
+            6
+          ]
+        },
+        "up": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            4,
+            16,
+            6
+          ]
+        },
+        "down": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            4,
+            16,
+            6
+          ]
+        }
+      }
+    }
+  ],
+  "render_type": "cutout"
+}

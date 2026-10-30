@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,col=0": {
+      "model": "liarsbar:block/bar_marquee_0"
+    },
+    "facing=north,col=1": {
+      "model": "liarsbar:block/bar_marquee_1"
+    },
+    "facing=north,col=2": {
+      "model": "liarsbar:block/bar_marquee_2"
+    },
+    "facing=east,col=0": {
+      "model": "liarsbar:block/bar_marquee_0",
+      "y": 90
+    },
+    "facing=east,col=1": {
+      "model": "liarsbar:block/bar_marquee_1",
+      "y": 90
+    },
+    "facing=east,col=2": {
+      "model": "liarsbar:block/bar_marquee_2",
+      "y": 90
+    },
+    "facing=south,col=0": {
+      "model": "liarsbar:block/bar_marquee_0",
+      "y": 180
+    },
+    "facing=south,col=1": {
+      "model": "liarsbar:block/bar_marquee_1",
+      "y": 180
+    },
+    "facing=south,col=2": {
+      "model": "liarsbar:block/bar_marquee_2",
+      "y": 180
+    },
+    "facing=west,col=0": {
+      "model": "liarsbar:block/bar_marquee_0",
+      "y": 270
+    },
+    "facing=west,col=1": {
+      "model": "liarsbar:block/bar_marquee_1",
+      "y": 270
+    },
+    "facing=west,col=2": {
+      "model": "liarsbar:block/bar_marquee_2",
+      "y": 270
+    }
+  }
+}

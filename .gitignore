@@ -1,0 +1,39 @@
+# Gradle / ForgeGradle
+.gradle/
+build/
+out/
+bin/
+run/
+run-server/
+logs/
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# IDE
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+
+# Python tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Preview GIF/frame strip hasil test (bisa digenerate ulang, ±40 MB)
+docs/preview/
+
+# OS / temp
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.swp
+*~

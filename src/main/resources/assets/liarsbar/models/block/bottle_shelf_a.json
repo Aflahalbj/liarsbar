@@ -1,0 +1,487 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "back": "liarsbar:block/shelf_back",
+    "wood": "liarsbar:block/walnut_planks",
+    "top": "liarsbar:block/counter_top",
+    "bottles": "liarsbar:block/bottles",
+    "glow": "liarsbar:block/bottles_glow",
+    "strip": "liarsbar:block/strip_glow",
+    "brass": "liarsbar:block/brass",
+    "particle": "liarsbar:block/shelf_back"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        15
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#back",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#wood",
+          "cullface": "south",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "cullface": "east",
+          "uv": [
+            0,
+            0,
+            1,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "cullface": "west",
+          "uv": [
+            15,
+            0,
+            16,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#wood",
+          "cullface": "up",
+          "uv": [
+            0,
+            15,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#wood",
+          "cullface": "down",
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        9
+      ],
+      "to": [
+        16,
+        1,
+        15
+      ],
+      "faces": {
+        "up": {
+          "texture": "#top",
+          "uv": [
+            0,
+            0,
+            16,
+            6
+          ]
+        },
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            1,
+            16,
+            7
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            7,
+            16,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "cullface": "east",
+          "uv": [
+            1,
+            15,
+            7,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "cullface": "west",
+          "uv": [
+            9,
+            15,
+            15,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        1,
+        12
+      ],
+      "to": [
+        16,
+        8,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bottles",
+          "uv": [
+            16,
+            1,
+            0,
+            8
+          ]
+        },
+        "south": {
+          "texture": "#bottles",
+          "uv": [
+            0,
+            1,
+            16,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        1,
+        11.98
+      ],
+      "to": [
+        16,
+        8,
+        11.98
+      ],
+      "faces": {
+        "north": {
+          "texture": "#glow",
+          "uv": [
+            16,
+            1,
+            0,
+            8
+          ]
+        }
+      },
+      "forge_data": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    },
+    {
+      "from": [
+        1,
+        -0.35,
+        12.5
+      ],
+      "to": [
+        15,
+        0,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#strip",
+          "uv": [
+            0,
+            0,
+            16,
+            4
+          ]
+        },
+        "north": {
+          "texture": "#strip",
+          "uv": [
+            0,
+            1,
+            16,
+            2
+          ]
+        }
+      },
+      "forge_data": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    },
+    {
+      "from": [
+        0,
+        3,
+        8.5
+      ],
+      "to": [
+        16,
+        3.5,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            6,
+            16,
+            10
+          ]
+        },
+        "up": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            2,
+            16,
+            6
+          ]
+        },
+        "down": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            10,
+            16,
+            14
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        8,
+        9
+      ],
+      "to": [
+        16,
+        9,
+        15
+      ],
+      "faces": {
+        "up": {
+          "texture": "#top",
+          "uv": [
+            0,
+            0,
+            16,
+            6
+          ]
+        },
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            1,
+            16,
+            7
+          ]
+        },
+        "north": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            7,
+            16,
+            8
+          ]
+        },
+        "east": {
+          "texture": "#wood",
+          "cullface": "east",
+          "uv": [
+            1,
+            7,
+            7,
+            8
+          ]
+        },
+        "west": {
+          "texture": "#wood",
+          "cullface": "west",
+          "uv": [
+            9,
+            7,
+            15,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        9,
+        12
+      ],
+      "to": [
+        16,
+        16,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bottles",
+          "uv": [
+            16,
+            9,
+            0,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#bottles",
+          "uv": [
+            0,
+            9,
+            16,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        9,
+        11.98
+      ],
+      "to": [
+        16,
+        16,
+        11.98
+      ],
+      "faces": {
+        "north": {
+          "texture": "#glow",
+          "uv": [
+            16,
+            9,
+            0,
+            16
+          ]
+        }
+      },
+      "forge_data": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    },
+    {
+      "from": [
+        1,
+        7.65,
+        12.5
+      ],
+      "to": [
+        15,
+        8,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#strip",
+          "uv": [
+            0,
+            0,
+            16,
+            4
+          ]
+        },
+        "north": {
+          "texture": "#strip",
+          "uv": [
+            0,
+            1,
+            16,
+            2
+          ]
+        }
+      },
+      "forge_data": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    },
+    {
+      "from": [
+        0,
+        11,
+        8.5
+      ],
+      "to": [
+        16,
+        11.5,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            6,
+            16,
+            10
+          ]
+        },
+        "up": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            2,
+            16,
+            6
+          ]
+        },
+        "down": {
+          "texture": "#brass",
+          "uv": [
+            0,
+            10,
+            16,
+            14
+          ]
+        }
+      }
+    }
+  ],
+  "render_type": "cutout"
+}

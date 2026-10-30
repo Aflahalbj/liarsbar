@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.liarsbar.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "liarsbar.refmap.json",
+  "mixins": [],
+  "client": [
+    "CameraAccessor",
+    "CameraMixin",
+    "LevelRendererMixin",
+    "MouseHandlerMixin",
+    "ChannelAccessor",
+    "SoundEngineAccessor",
+    "SoundManagerAccessor",
+    "veil.IndirectLightRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

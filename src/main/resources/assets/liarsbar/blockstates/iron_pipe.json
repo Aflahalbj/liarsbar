@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "liarsbar:block/iron_pipe"
+    },
+    "axis=x": {
+      "model": "liarsbar:block/iron_pipe",
+      "y": 90
+    }
+  }
+}

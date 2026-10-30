@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,level=wainscot": {
+      "model": "liarsbar:block/bar_wall_wainscot"
+    },
+    "facing=north,level=paper": {
+      "model": "liarsbar:block/bar_wall_paper"
+    },
+    "facing=north,level=crown": {
+      "model": "liarsbar:block/bar_wall_crown"
+    },
+    "facing=east,level=wainscot": {
+      "model": "liarsbar:block/bar_wall_wainscot",
+      "y": 90
+    },
+    "facing=east,level=paper": {
+      "model": "liarsbar:block/bar_wall_paper",
+      "y": 90
+    },
+    "facing=east,level=crown": {
+      "model": "liarsbar:block/bar_wall_crown",
+      "y": 90
+    },
+    "facing=south,level=wainscot": {
+      "model": "liarsbar:block/bar_wall_wainscot",
+      "y": 180
+    },
+    "facing=south,level=paper": {
+      "model": "liarsbar:block/bar_wall_paper",
+      "y": 180
+    },
+    "facing=south,level=crown": {
+      "model": "liarsbar:block/bar_wall_crown",
+      "y": 180
+    },
+    "facing=west,level=wainscot": {
+      "model": "liarsbar:block/bar_wall_wainscot",
+      "y": 270
+    },
+    "facing=west,level=paper": {
+      "model": "liarsbar:block/bar_wall_paper",
+      "y": 270
+    },
+    "facing=west,level=crown": {
+      "model": "liarsbar:block/bar_wall_crown",
+      "y": 270
+    }
+  }
+}

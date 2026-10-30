@@ -1,0 +1,59 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "art": "liarsbar:block/poster/bluff_bottom",
+    "particle": "liarsbar:block/poster/bluff_bottom"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        1,
+        15.5
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#art",
+          "uv": [
+            0,
+            1,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#art",
+          "uv": [
+            15,
+            1,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#art",
+          "uv": [
+            0,
+            1,
+            1,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#art",
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ]
+        }
+      }
+    }
+  ]
+}

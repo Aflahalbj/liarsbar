@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "facing=north": [
+      {
+        "model": "liarsbar:block/bottle_shelf_a"
+      },
+      {
+        "model": "liarsbar:block/bottle_shelf_b"
+      }
+    ],
+    "facing=east": [
+      {
+        "model": "liarsbar:block/bottle_shelf_a",
+        "y": 90
+      },
+      {
+        "model": "liarsbar:block/bottle_shelf_b",
+        "y": 90
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "liarsbar:block/bottle_shelf_a",
+        "y": 180
+      },
+      {
+        "model": "liarsbar:block/bottle_shelf_b",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "liarsbar:block/bottle_shelf_a",
+        "y": 270
+      },
+      {
+        "model": "liarsbar:block/bottle_shelf_b",
+        "y": 270
+      }
+    ]
+  }
+}

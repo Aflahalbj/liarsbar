@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "liarsbar:block/bar_ceiling",
+    "top": "liarsbar:block/bar_roof",
+    "side": "liarsbar:block/bar_ceiling"
+  }
+}

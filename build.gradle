@@ -1,0 +1,219 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+// Veil, Player Animator, dan bendy-lib ikut dibundel di dalam jar mod ini.
+jarJar.enable()
+
+// Ekstensi VS Code kadang menempelkan dua folder ke PATH tanpa ';' (mis. "c:\a\noConfigScriptsc:\b\noConfigScripts").
+// Di Windows PATH jadi java.library.path, dan RenderDocker milik Veil memanggil Path.of() untuk tiap entri ->
+// InvalidPathException saat startup. Entri yang punya ':' selain huruf drive dibuang dari PATH proses run.
+def pathEnvKey = System.getenv().keySet().find { it.equalsIgnoreCase('PATH') } ?: 'PATH'
+def sanitizedPath = (System.getenv(pathEnvKey) ?: '').split(File.pathSeparator)
+        .findAll { !it.isEmpty() && (File.pathSeparator != ';' || it.lastIndexOf(':') <= 1) }
+        .join(File.pathSeparator)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+
+    runs {
+        configureEach {
+            // Mixin mod lain di dev (mis. fake player) memakai refmap SRG; tanpa ini injeksinya gagal saat start.
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            arg '-mixin.config=liarsbar.mixins.json'
+            environment pathEnvKey, sanitizedPath
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+        }
+        client {
+            workingDirectory project.file('run')
+            // RAM mepet: client dev dibatasi 2200m (gradlew runClient -Pclientxmx=... untuk mengubah).
+            jvmArg "-Xmx${project.findProperty('clientxmx') ?: '2200m'}"
+            // gradlew runClient -Pclienttest=true: masuk world uji, main satu meja penuh dengan bot, screenshot, keluar
+            // (lihat ClientSelfTest). -Pclienttest=NAMA untuk skenario lain.
+            if (project.hasProperty('clienttest')) {
+                property 'liarsbar.clienttest', project.property('clienttest').toString()
+            }
+            // gradlew runClient -Panimtest=true: world uji, lalu tunggu skrip di run/animtest/command.txt (lihat AnimDev).
+            if (project.hasProperty('animtest')) {
+                property 'liarsbar.animtest', 'true'
+            }
+            // -Pworld=open: world uji baru tiap launch, terrain normal, siang (kondisi pemain biasa, bukan flat).
+            if (project.hasProperty('world')) {
+                property 'liarsbar.world', project.property('world').toString()
+            }
+            // gradlew runClient -Pjoin=localhost: langsung masuk ke server dev, tanpa menu.
+            if (project.hasProperty('join')) {
+                args '--quickPlayMultiplayer', project.property('join').toString()
+            }
+            // gradlew runClient -Pplayer=Alex: nama pemain lain (server dev offline-mode; bawaan "Dev").
+            if (project.hasProperty('player')) {
+                args '--username', project.property('player').toString()
+            }
+            mods {
+                liarsbar {
+                    source sourceSets.main
+                }
+            }
+        }
+        server {
+            // gradlew runServer -Pmp=true: server multipemain dev di run-server (offline-mode).
+            workingDirectory project.file(project.hasProperty('mp') ? 'run-server' : 'run')
+            if (project.hasProperty('serverxmx')) {
+                jvmArg "-Xmx${project.property('serverxmx')}"
+            }
+            args '--nogui'
+            mods {
+                liarsbar {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+// Console server dev menerima perintah dari stdin (mis. "liarsbar sim 10 200" saat uji otomatis).
+tasks.matching { it.name == 'runServer' }.configureEach {
+    standardInput = System.in
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'BlameJared (Veil)'
+        url = 'https://maven.blamejared.com'
+    }
+    // Advanced Fake Players (project ../fakeplayerfordev) untuk uji multipemain di dev saja; lihat dependencies.
+    if (file('../fakeplayerfordev/build/libs/advfakeplayer-1.0.0.jar').exists()) {
+        flatDir { dirs '../fakeplayerfordev/build/libs' }
+    }
+    // Player Animator, bendy-lib, GeckoLib, dan Simple Voice Chat dari Maven Modrinth.
+    // (GeckoLib 4.4.9 di maven cloudsmith-nya hanya berisi source, jadi jar rilisnya diambil dari Modrinth.)
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content { includeGroup 'maven.modrinth' }
+    }
+    maven {
+        name = 'CurseMaven'
+        url = 'https://cursemaven.com'
+        content { includeGroup 'curse.maven' }
+    }
+}
+
+mixin {
+    add sourceSets.main, 'liarsbar.refmap.json'
+    config 'liarsbar.mixins.json'
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    // Post-processing dan point light. Jar Veil sudah berisi dependency-nya sendiri, jadi transitive = false.
+    implementation fg.deobf('foundry.veil:Veil-forge-1.20.1:1.0.0.228')
+    jarJar(group: 'foundry.veil', name: 'Veil-forge-1.20.1', version: '[1.0.0.228,1.0.0.228]') {
+        transitive = false
+    }
+
+    // Animasi pemain (format Emotecraft; siku/lutut menekuk lewat bendy-lib). MIT, dibundel.
+    // Maven Modrinth menjawab HEAD maven-metadata.xml dengan 404, jadi versi pasti untuk resolusi
+    // dan range-nya dipasang lewat jarJar.ranged (tanpa '+').
+    implementation fg.deobf('maven.modrinth:playeranimator:1.0.2-rc1+1.20-forge')
+    implementation fg.deobf('maven.modrinth:bendy-lib:4.0.0-forge')
+    jarJar(group: 'maven.modrinth', name: 'playeranimator', version: '1.0.2-rc1+1.20-forge') {
+        transitive = false
+        jarJar.ranged(it, '[1.0.2-rc1,)')
+    }
+    jarJar(group: 'maven.modrinth', name: 'bendy-lib', version: '4.0.0-forge') {
+        transitive = false
+        jarJar.ranged(it, '[4.0.0-forge,)')
+    }
+
+    // Revolver, kartu, deck, cup dadu, properti bar. Dipasang sendiri (lihat mods.toml), tidak dibundel.
+    implementation fg.deobf('maven.modrinth:geckolib:RBA7lJaW') // = geckolib-forge-1.20.1-4.4.9
+    // Group voice per meja. Kode hanya memakai API-nya; jar lengkapnya di sini supaya runClient/runServer punya voice chat.
+    implementation fg.deobf('maven.modrinth:simple-voice-chat:forge-1.20.1-2.6.24')
+
+    // Fake player hanya di runClient/runServer: runtimeOnly, jadi tidak ikut ke jar hasil build,
+    // tidak di jarJar, dan tidak ada di mods.toml. Dilewati kalau jar-nya tidak ada.
+    if (file('../fakeplayerfordev/build/libs/advfakeplayer-1.0.0.jar').exists()) {
+        runtimeOnly fg.deobf('blank:advfakeplayer:1.0.0')
+    }
+
+    // Rules engine (com.liarsbar.game) diuji tanpa Minecraft.
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+    maxHeapSize = '768m'
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        showStandardStreams = true
+        exceptionFormat = 'full'
+    }
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+            minecraft_version_range: '[1.20.1,1.20.2)',
+            forge_version_range    : '[47,)',
+            loader_version_range   : '[47,)',
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : 'All Rights Reserved',
+            mod_version            : project.version,
+            mod_authors            : 'User',
+            mod_description        : '''Liar's Deck at a round table for 2 to 10 players: bluff, call LIAR, and pull the trigger.'''
+    ]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/mods.toml']) { expand replaceProperties + [project: project] }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"   : mod_id,
+                "Specification-Vendor"  : "User",
+                "Specification-Version" : "1",
+                "Implementation-Title"  : project.name,
+                "Implementation-Version": project.jar.archiveVersion,
+                "Implementation-Vendor" : "User",
+                "MixinConfigs"          : "liarsbar.mixins.json"
+        ])
+    }
+    finalizedBy 'reobfJar'
+}
+
+// Jar akhir = jar mod + Veil/Player Animator/bendy-lib di dalamnya (jarJar), lalu di-reobf.
+tasks.named('jarJar') {
+    archiveClassifier = ''
+}
+tasks.named('jar') {
+    archiveClassifier = 'slim'
+}
+reobf {
+    jarJar {}
+}
+tasks.named('jarJar').configure { finalizedBy 'reobfJarJar' }

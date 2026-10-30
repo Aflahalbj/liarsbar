@@ -1,0 +1,59 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "art": "liarsbar:block/poster/pull_top",
+    "particle": "liarsbar:block/poster/pull_top"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        15.5
+      ],
+      "to": [
+        16,
+        15,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#art",
+          "uv": [
+            0,
+            0,
+            16,
+            15
+          ]
+        },
+        "east": {
+          "texture": "#art",
+          "uv": [
+            15,
+            0,
+            16,
+            15
+          ]
+        },
+        "west": {
+          "texture": "#art",
+          "uv": [
+            0,
+            0,
+            1,
+            15
+          ]
+        },
+        "up": {
+          "texture": "#art",
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ]
+        }
+      }
+    }
+  ]
+}

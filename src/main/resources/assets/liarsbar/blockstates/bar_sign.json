@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,part=inner": {
+      "model": "liarsbar:block/bar_sign_inner"
+    },
+    "facing=north,part=outer": {
+      "model": "liarsbar:block/bar_sign_outer"
+    },
+    "facing=east,part=inner": {
+      "model": "liarsbar:block/bar_sign_inner",
+      "y": 90
+    },
+    "facing=east,part=outer": {
+      "model": "liarsbar:block/bar_sign_outer",
+      "y": 90
+    },
+    "facing=south,part=inner": {
+      "model": "liarsbar:block/bar_sign_inner",
+      "y": 180
+    },
+    "facing=south,part=outer": {
+      "model": "liarsbar:block/bar_sign_outer",
+      "y": 180
+    },
+    "facing=west,part=inner": {
+      "model": "liarsbar:block/bar_sign_inner",
+      "y": 270
+    },
+    "facing=west,part=outer": {
+      "model": "liarsbar:block/bar_sign_outer",
+      "y": 270
+    }
+  }
+}
